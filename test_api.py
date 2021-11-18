@@ -1,7 +1,9 @@
 import unittest
 import requests
 
-URL = "https://wcg-apis.herokuapp.com"
+from decouple import config
+
+URL = config("URL")
 
 
 def create_reserve_params(citizen_id, site_name, vaccine_name):
